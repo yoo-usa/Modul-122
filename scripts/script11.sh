@@ -6,8 +6,10 @@ if [ $# -ne 1 ]; then
 fi
 
 for fname in  ${1}/*; do
-  if [ -x $fname ]; then
-     echo $fname 
-  fi 
+  if [ ! -d fname ]; then 
+    if [ -x $fname ]; then
+       echo $fname 
+    fi 
+  fi
 done 
 
